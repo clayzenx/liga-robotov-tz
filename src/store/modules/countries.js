@@ -8,7 +8,7 @@ export default {
   },
   actions: {
     fetchCountries({commit}){
-      fetch('https://api.hh.ru/areas')
+      fetch('https://api.hh.ru/areas')                 // Запрос на данные
         .then(response => response.json())
         .then(result => commit('updateCountries', result))   
     }

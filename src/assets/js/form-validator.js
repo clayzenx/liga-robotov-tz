@@ -1,3 +1,4 @@
+// Объект необходимый для валидации полей
 const formValidator = {
   name: [{
       required: true,

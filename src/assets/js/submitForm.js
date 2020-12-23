@@ -1,20 +1,16 @@
+// Массив доступных для франшизы мест
+const availablePlaces = ['Алексеевск', 'Кызыл', 'Баку']
+
+// Экспортируемая функция отправки формы
 const submitForm = (form) => {
-  console.log(form);
-  if (form.city) {
-    isAvailable(form.city)
-  } else if (form.region) {
-    isAvailable(form.region)
-  }
+  if (form.city !== 'Город') { isAvailable(form.city)} 
+  else if (form.region) { isAvailable(form.region) }
 }
 
-const availablePlaces = ['Бар']
-
+// Функция проверки на наличие Города/Региона в массиве доступных мест
 const isAvailable = (place) => {
-  if(availablePlaces.includes(place)){
-    alert('Доступно!')
-  } else {
-    alert('Не доступно :(')
-  }
+  if(availablePlaces.includes(place)){ alert('Доступно!') } 
+  else { alert('Не доступно :(') }
 }
 
 export default submitForm;
